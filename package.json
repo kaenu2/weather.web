@@ -1,0 +1,45 @@
+{
+	"name": "weather",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"build": "electron-builder"
+	},
+	"build": {
+		"appId": "weather",
+		"mac": {
+			"category": "your.app.category.type"
+		},
+		"win": {
+			"target": "nsis"
+		},
+		"directories": {
+			"output": "release-installer",
+			"app": ""
+		},
+		"nsis": {
+			"allowElevation": true,
+			"createDesktopShortcut": false,
+			"createStartMenuShortcut": false,
+			"runAfterFinish": true,
+			"deleteAppDataOnUninstall": false,
+			"allowToChangeInstallationDirectory": true,
+			"oneClick": false,
+			"perMachine": true
+		},
+		"publish": [
+			{
+				"provider": "generic",
+				"url": ""
+			}
+		]
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^25.2.0",
+		"electron-builder": "^24.4.0"
+	}
+}
