@@ -51,7 +51,7 @@ const inputSection = formSection.querySelector('input');
 const errorSection = document.querySelector('.header__error');
 
 const api = {
-	url: 'http://api.weatherstack.com/',
+	url: 'https://api.weatherstack.com/',
 	key: 'e7ba23cb65a5fecfe9826d6a1af89d99',
 	city: localStorage.getItem('city') || 'Москва'
 };
